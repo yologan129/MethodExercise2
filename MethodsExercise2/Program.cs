@@ -2,7 +2,7 @@
 
 namespace MethodsExercise2
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -29,6 +29,54 @@ namespace MethodsExercise2
                 Console.WriteLine($"Favorite color {color}");
                 Console.WriteLine($"Favorite Animal {animal}");
                 Console.WriteLine($"Favorite Band {band}");
+
+
+                Subtract(1, 2);
+                Sum(2, 2);
+                Multiply(5, 5, 5);
+                Divide(3, 3);
+                Modulus(3, 5);
+                Add(7, 8);
+
+            }
+
+            static int Sum(int num1, int num2)
+            {
+                var answer = num1 + num2;
+                return answer;
+            }
+
+            static int Subtract(int num1, int num2)
+            {
+                return num1 - num2;
+            }
+
+            static int Multiply(int num1, int num2, int num3)
+            {
+                return num1 * num2 * num3;
+            }
+
+            static double Divide(int num1, int num2)
+            {
+                return num1 / num2;
+            }
+
+            static int Modulus(int num1, int num2)
+            {
+                return num1 % num2;
+            }
+
+
+
+
+            static int Add(params int[] nums)
+            {
+                var sum = 0;
+                foreach (var num in nums)
+                {
+                    sum += num;
+                }
+                return sum;
             }
         }
     }
